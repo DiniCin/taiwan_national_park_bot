@@ -30,16 +30,16 @@ workflows:
   main:
     jobs:
       - build
-  # test:
-  #   jobs:
-  #     - send_application
-  # nightly:
-  #   triggers:
-  #     - schedule:
-  #         cron: "0 23 * * *"
-  #         filters:
-  #           branches:
-  #             only:
-  #               - master
-  #   jobs:
-  #     - send_application
+  test:
+    jobs:
+      - send_application
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 23 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - send_application

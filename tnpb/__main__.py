@@ -4,7 +4,7 @@ from tnpb.bot import TNPBot
 
 
 def main():
-    time.sleep(10)
+    time.sleep(4)
     tnp_bot = TNPBot()
 
     resp = tnp_bot.get_query_result(id=os.getenv("ID"), email=os.getenv("EMAIL"))

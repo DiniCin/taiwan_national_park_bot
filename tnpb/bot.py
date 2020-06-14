@@ -100,7 +100,7 @@ class TNPBot:
         :param str email: The email for query
         """
 
-        resp = self.send_query(id, email)
+        resp = self.send_query(id, email, retry=7)
 
         if not resp:
             error_logger.error("No result found. Exit")

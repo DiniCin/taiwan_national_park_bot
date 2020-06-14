@@ -11,7 +11,8 @@ def main():
         try:
             tnp_bot = TNPBot()
             resp = tnp_bot.get_query_result(id=os.getenv("ID"),
-                                            email=os.getenv("EMAIL"))
+                                            email=os.getenv("EMAIL"),
+                                            retry=7)
             serial_num = tnp_bot.send_application(resp)
             
         except AttributeError:

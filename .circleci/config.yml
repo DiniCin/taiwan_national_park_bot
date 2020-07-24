@@ -33,13 +33,13 @@ workflows:
   test:
     jobs:
       - send_application
-  nightly:
-    triggers:
-      - schedule:
-          cron: "59 22 * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - send_application
+  # nightly:
+  #   triggers:
+  #     - schedule:
+  #         cron: "59 22 * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - send_application
